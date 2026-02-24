@@ -112,7 +112,7 @@ fig.add_trace(go.Scatter(
 ))
 
 # Abbellimenti del grafico
-fig.add_vline(x=oggi_str, line_dash="dash", line_color="gray", annotation_text="ADESSO")
+fig.add_vline(x=pd.to_datetime(oggi_str).timestamp() * 1000, line_dash="dash", line_color="gray", annotation_text="ADESSO")
 fig.update_layout(
     height=450, 
     hovermode="x unified",

@@ -67,7 +67,7 @@ with st.spinner('Connessione alle banche dati pubbliche in corso...'):
     df_main = fetch_public_data()
 
 # Separiamo storico (su cui abbiamo o calcoliamo il prezzo) e futuro (da prevedere)
-oggi_str = datetime.now().strftime('%Y-%m-%d %H:%00')
+oggi_str = datetime.now().strftime('%Y-%m-%d %H:00')
 df_train = df_main[df_main['Prezzo_Reale_Disponibile'] == True].copy()
 df_predict = df_main[df_main['Prezzo_Reale_Disponibile'] == False].copy()
 
